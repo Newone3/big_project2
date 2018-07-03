@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% block prisp %}
+
+<div class="page-header1">
+  <div class="container">
+    <h1><a href="{% url 'prispevky:post_list' %}">Swaeg Bros</a></h1>
+  </div>
+
+</div>
+
+
+
+
+<div class="container">
+
+
+<div class="post">
+        {% if prispevky.published_date %}
+            <div class="date">
+                {{ prispevky.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ prispevky.title }}</h1>
+        <p>{{ prispevky.text|linebreaksbr }}</p>
+
+    </div>
+    <img src="{% static "media/images/maxresdefault0.jpg"%} " height="50%" width="50%" alt="Uh uh Didnt show">
+    <img src="{% static "media/images/django.jpg"%} " height="50%" width="50%" alt="Uh uh Didnt show">
+</div>
+
+
+
+{% endblock prisp %}
