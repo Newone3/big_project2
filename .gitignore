@@ -1,5 +1,6 @@
 *.pyc
 __pycache__
-myvenv
+myproj
 db.sqlite3
 .DS_Store
+myDjangoEnv
